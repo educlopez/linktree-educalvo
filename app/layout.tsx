@@ -7,7 +7,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body className="antialiased bg-zinc-900 bg-custom-gradient">
+        {children}
+      </body>
     </html>
   );
 }
