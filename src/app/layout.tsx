@@ -1,53 +1,48 @@
+import "./globals.css"
 
-import "./globals.css";
+import NorthenLights from "@/components/NorthenLights"
 
-import NorthenLights from "@/components/NorthenLights";
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
-  : "http://localhost:3000";
+  : "http://localhost:3000"
 
 export const metadata = {
   metadataBase: new URL(defaultUrl),
   title: {
-    default: "SparkBites | Web Design Inspiration Directory",
-    template: "%s | SparkBites",
+    default: "Edu Calvo - Diseñador Web & Frontend",
   },
-  description:
-    "Discover SparkBites, a curated directory of innovative web design inspiration. Explore UI/UX trends, creative portfolios, and cutting-edge design resources for your next project.",
+  description: "Diseñador web y Frontend con sede en Madrid",
   openGraph: {
-    title: "SparkBites | Web Design Inspiration Directory",
-    description:
-      "Discover SparkBites, a curated directory of innovative web design inspiration. Explore UI/UX trends, creative portfolios, and cutting-edge design resources for your next project.",
+    title: "Edu Calvo - Diseñador Web & Frontend",
+    description: "Diseñador web y Frontend con sede en Madrid",
     url: defaultUrl,
-    siteName:
-      "Discover SparkBites, a curated directory of innovative web design inspiration. Explore UI/UX trends, creative portfolios, and cutting-edge design resources for your next project.",
-    locale: "en_US",
+    siteName: "Diseñador web y Frontend con sede en Madrid",
+    locale: "es_ES",
     type: "website",
     images: [
       {
-        url: "/opengraph-image.jpg",
+        url: "/og.jpg",
         width: 800,
         height: 600,
       },
       {
-        url: "/opengraph-image.jpg",
+        url: "/og.jpg",
         width: 1800,
         height: 1600,
       },
     ],
   },
   twitter: {
-    title: "SparkBites | Web Design Inspiration Directory",
-    description:
-      "Discover SparkBites, a curated directory of innovative web design inspiration. Explore UI/UX trends, creative portfolios, and cutting-edge design resources for your next project.",
+    title: "du Calvo - Diseñador Web & Frontend",
+    description: "Diseñador web y Frontend con sede en Madrid",
     images: [
       {
-        url: "/opengraph-image.jpg",
+        url: "/og.jpg",
         width: 800,
         height: 600,
       },
       {
-        url: "/opengraph-image.jpg",
+        url: "/og.jpg",
         width: 1800,
         height: 1600,
       },
@@ -64,16 +59,16 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
-};
+}
 
 export default async function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="es" suppressHydrationWarning>
-       <head>
+      <head>
         {process.env.NODE_ENV === "production" && (
           <script
             defer
@@ -82,10 +77,10 @@ export default async function RootLayout({
           ></script>
         )}
       </head>
-      <body className="antialiased bg-zinc-900">
+      <body className="bg-zinc-900 antialiased">
         <NorthenLights />
         {children}
       </body>
     </html>
-  );
+  )
 }
