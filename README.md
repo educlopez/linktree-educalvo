@@ -1,36 +1,122 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Linktree Clone with Northern Lights
 
-## Linktree
+<div align="center">
 
-First, run the development server:
+![Next.js Badge](https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=fff&style=flat)
+![Tailwind CSS Badge](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=fff&style=flat)
+![TypeScript Badge](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=flat)
+![Vercel Badge](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=fff&style=flat)
+
+</div>
+
+A beautiful and responsive Linktree clone featuring a mesmerizing Northern Lights animation effect. Built with Next.js, TypeScript, and Tailwind CSS, this project provides a modern and elegant way to showcase your social media links and personal content. It uses Vercel's Edge Config Store for seamless data management.
+
+## Table of Contents
+
+- [Linktree Clone with Northern Lights](#linktree-clone-with-northern-lights)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Edge Config Setup](#edge-config-setup)
+  - [Contributing](#contributing)
+  - [License](#license)
+
+## Features
+
+- **Northern Lights Animation**: Beautiful animated background effect
+- **Responsive Design**: Fully responsive layout that works on all devices
+- **TypeScript Support**: Built with TypeScript for better development experience
+- **Modern Stack**: Uses Next.js and Tailwind CSS for modern web development
+- **Edge Config Store**: Utilizes Vercel's Edge Config for efficient data storage
+- **Customizable**: Easy to customize with your own links and styling
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/educlopez/linktree-educalvo.git
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
+# or
+pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+1. Modify the links and content in the Edge Config Store
+2. Customize the styling using Tailwind CSS classes
+3. Deploy your site to Vercel
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Edge Config Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This project uses Vercel's Edge Config Store to manage the links and personal information. Here's an example of the data structure:
 
-## Learn More
+```json
+{
+  "linktree": {
+    "name": "Your Name",
+    "avatar": "https://github.com/yourusername.png",
+    "links": [
+      {
+        "title": "Website",
+        "href": "https://yourwebsite.com",
+        "image": ""
+      }
+    ],
+    "socials": [
+      {
+        "title": "X",
+        "href": "https://x.com/yourusername"
+      },
+      {
+        "title": "Github",
+        "href": "https://github.com/yourusername"
+      }
+    ]
+  }
+}
+```
 
-To learn more about Next.js, take a look at the following resources:
+To set up Edge Config:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Create a new Edge Config in your Vercel project settings
+2. Add your configuration using the structure above
+3. Add the Edge Config connection string to your environment variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Contributing
 
-## Deploy on Vercel
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Made with ❤️ by Edu Calvo
