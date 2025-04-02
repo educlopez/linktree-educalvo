@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { get } from "@vercel/edge-config";
 import { redirect } from "next/navigation";
-import { Github, Instagram } from "lucide-react";
+import { Github, Instagram, Linkedin } from "lucide-react";
 
 export const dynamic = "force-dynamic",
   runtime = "edge";
@@ -118,6 +118,8 @@ export default async function HomePage() {
               <XIcon />
             ) : social.href.includes("github") ? (
                 <Github size={24} />
+            ) : social.href.includes("linkedin") ? (
+                  <Linkedin size={24} />
             ) : social.href.includes("instagram") ? (
                   <Instagram size={24} />
             ) : null}
