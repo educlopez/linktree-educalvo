@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["pbs.twimg.com", "educalvolopez.com", "github.com"],
+    remotePatterns: [
+      { hostname: "pbs.twimg.com" },
+      { hostname: "educalvolopez.com" },
+      { hostname: "github.com" },
+    ],
   },
 };
 
